@@ -1,8 +1,11 @@
-# multiproc_test.py
-
+# Exercicio_1.py
+import sys
 import random
-import multiprocessing
+import threading
 import time
+
+def sort_list(number_list,i,j):
+    number_list[i:j] = sorted(number_list[i:j])
 
 def list_append(count, id, out_list):
     """
@@ -13,30 +16,64 @@ def list_append(count, id, out_list):
     for i in range(count):
         out_list.append(random.random())
 
-if __name__ == "__main__":
-
-    start = time.time()
-
-    size  = 100000000   # Number of random numbers to add
-    procs = 8           # Number of processes to create
+def order_list(number_list,k,size):
+    threads = k   # Number of threads to create
 
     # Create a list of jobs and then iterate through
-    # the number of processes appending each process to
+    # the number of threads appending each thread to
     # the job list 
     jobs = []
-    for i in range(0, procs):
-        out_list = list()
-        process = multiprocessing.Process(target=list_append, 
-                                          args=(size//procs, i, out_list))
-        jobs.append(process)
+    for i in range(0, threads-1):
+        
+        thread = threading.Thread(target=sort_list(number_list, (size//threads)*i,(size//threads)*(i+1)))
+        jobs.append(thread)
 
-    # Start the processes (i.e. calculate the random number lists)      
+    # Start the threads (i.e. calculate the random number lists)
     for j in jobs:
         j.start()
 
-    # Ensure all of the processes have finished
+    # Ensure all of the threads have finished
     for j in jobs:
         j.join()
 
+def create_list(number_list,k,size):
+    
+    threads = 4   # Number of threads to create
+
+    # Create a list of jobs and then iterate through
+    # the number of threads appending each thread to
+    # the job list 
+    jobs = []
+    for i in range(0, threads):
+        
+        thread = threading.Thread(target=list_append(size//threads, i, number_list))
+        jobs.append(thread)
+
+    # Start the threads (i.e. calculate the random number lists)
+    for j in jobs:
+        j.start()
+
+    # Ensure all of the threads have finished
+    for j in jobs:
+        j.join()
+    
+def main(argv):
+    number_list = list()
+    size = 50000000
+    i = int(argv[0])
+    create_list(number_list,i,size)
+    print(len(number_list))
+    start = time.time()
+    while i > 1:
+        order_list(number_list,i,size)
+        if(i == 1):
+            i = 0
+        else:
+            i = i//2
+        print(i)
     print("List processing complete.")
     print("Time eleapsed: " + str(time.time()-start))
+
+
+if __name__ == "__main__":
+   main(sys.argv[1:])
