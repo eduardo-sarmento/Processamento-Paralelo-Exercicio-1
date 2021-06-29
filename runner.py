@@ -33,6 +33,7 @@ def main(argv):
             exe1.create_list(number_list, 2, size) # time to create the list doesn't count, so we can use any number of threads
             # order list and get execution duration
             durations.append(run_order(number_list, k, size))
+        # calculate mean and pstdev
         means.append(sts.mean(durations))
         pstdevs.append(sts.pstdev(durations))
 
