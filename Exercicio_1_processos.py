@@ -85,5 +85,3 @@ def main(argv):
     print("Time eleapsed: " + str(time.time()-start))
     #print(is_sorted(number_list))
 
-if __name__ == "__main__":
-   main(sys.argv[1:])
