@@ -1,0 +1,48 @@
+CONFIG: 
+Intel(R) Core(TM) i7-2600 CPU @ 3.40GHz, 3401 Mhz, 4 Cores, 8 Logical Processors
+8 GB RAM DDR3
+
+Ordering complete for k = 1, time eleapsed: 25.716985940933228
+Ordering complete for k = 1, time eleapsed: 25.435675382614136
+Ordering complete for k = 1, time eleapsed: 25.48134994506836
+Ordering complete for k = 1, time eleapsed: 25.465245246887207
+Ordering complete for k = 1, time eleapsed: 25.43404531478882
+Ordering complete for k = 1, time eleapsed: 25.527261972427368
+Ordering complete for k = 1, time eleapsed: 25.496256113052368
+Ordering complete for k = 1, time eleapsed: 25.93411159515381
+Ordering complete for k = 1, time eleapsed: 25.465432167053223
+Ordering complete for k = 1, time eleapsed: 25.48141837120056
+For k = 1, mean is 25.543778204917906 and standard deviation is 0.1512320407522596
+Ordering complete for k = 2, time eleapsed: 34.76542687416077
+Ordering complete for k = 2, time eleapsed: 34.67612361907959
+Ordering complete for k = 2, time eleapsed: 34.699278593063354
+Ordering complete for k = 2, time eleapsed: 34.70491623878479
+Ordering complete for k = 2, time eleapsed: 35.293973207473755
+Ordering complete for k = 2, time eleapsed: 34.836703062057495
+Ordering complete for k = 2, time eleapsed: 34.691304445266724
+Ordering complete for k = 2, time eleapsed: 34.57378625869751
+Ordering complete for k = 2, time eleapsed: 34.653390884399414
+Ordering complete for k = 2, time eleapsed: 34.62994313240051
+For k = 2, mean is 34.752484631538394 and standard deviation is 0.19284887235242618
+Ordering complete for k = 4, time eleapsed: 43.042609214782715
+Ordering complete for k = 4, time eleapsed: 42.87948226928711
+Ordering complete for k = 4, time eleapsed: 43.39382553100586
+Ordering complete for k = 4, time eleapsed: 43.01502823829651
+Ordering complete for k = 4, time eleapsed: 43.108721017837524
+Ordering complete for k = 4, time eleapsed: 43.158591508865356
+Ordering complete for k = 4, time eleapsed: 42.86014461517334
+Ordering complete for k = 4, time eleapsed: 43.488662004470825
+Ordering complete for k = 4, time eleapsed: 43.13865518569946
+Ordering complete for k = 4, time eleapsed: 43.165891885757446
+For k = 4, mean is 43.125161147117616 and standard deviation is 0.18896516237252461
+Ordering complete for k = 8, time eleapsed: 51.201183557510376
+Ordering complete for k = 8, time eleapsed: 50.86227083206177
+Ordering complete for k = 8, time eleapsed: 51.57807993888855
+Ordering complete for k = 8, time eleapsed: 50.82724046707153
+Ordering complete for k = 8, time eleapsed: 51.0834743976593
+Ordering complete for k = 8, time eleapsed: 50.991422176361084
+Ordering complete for k = 8, time eleapsed: 50.99043607711792
+Ordering complete for k = 8, time eleapsed: 50.94571495056152
+Ordering complete for k = 8, time eleapsed: 50.86846351623535
+Ordering complete for k = 8, time eleapsed: 50.804776668548584
+For k = 8, mean is 51.0153062582016 and standard deviation is 0.2205940817691519
