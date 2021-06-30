@@ -2,10 +2,12 @@ import statistics as sts
 import matplotlib.pyplot as plt
 import Exercicio_1 as exe1
 import time
+import sys
 
 # run ordering
 # return duration
 def run_order(number_list, k, size):
+    threads = k
     start = time.time()
     while k >= 1:
         exe1.order_list(number_list,k,size)
@@ -15,7 +17,7 @@ def run_order(number_list, k, size):
             k = k//2
 
     duration = time.time()-start
-    print("Ordering complete for k = {}, time eleapsed: ".format(k) + str(duration))
+    print("Ordering complete for k = {}, time eleapsed: ".format(threads) + str(duration))
     return duration
 
 def main(argv):
@@ -34,8 +36,11 @@ def main(argv):
             # order list and get execution duration
             durations.append(run_order(number_list, k, size))
         # calculate mean and pstdev
-        means.append(sts.mean(durations))
-        pstdevs.append(sts.pstdev(durations))
+        mean = sts.mean(durations)
+        pstdev = sts.pstdev(durations)
+        print("For k = {}, mean is {} and standard deviation is {}".format(k, mean, pstdev))
+        means.append(mean)
+        pstdevs.append(pstdev)
 
     # PLOT MEANS GRAPH
     plt.plot(ks, means)
@@ -50,6 +55,9 @@ def main(argv):
     plt.ylabel('tempo (desvio padrão)')
     plt.title('Gráfico de Desvio Padrão')
     plt.show()
+
+if __name__ == "__main__":
+   main(sys.argv[1:])
         
 
     
