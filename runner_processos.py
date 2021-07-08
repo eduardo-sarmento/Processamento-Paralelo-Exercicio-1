@@ -1,6 +1,6 @@
 import statistics as sts
 import matplotlib.pyplot as plt
-import Exercicio_1 as exe1
+import Exercicio_1_processos as exe1
 import time
 import sys
 
