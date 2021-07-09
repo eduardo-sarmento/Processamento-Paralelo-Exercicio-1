@@ -1,1 +1,2 @@
 # Processamento-Paralelo-Exercicio-1
+Para a execução do programa, basta executar os arquivos runner.py, para paralelização com threads e runner_processos.py, para paralelização com processos, sem nenhum parâmetro
